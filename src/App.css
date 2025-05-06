@@ -1,0 +1,107 @@
+/* Default Light Mode Styles */
+body {
+  background-color: #f7fafc; /* Light background color */
+  color: #2d3748; /* Dark text color */
+}
+
+body .bg-gray-100 {
+  background-color: #f7fafc; /* Light background for gray-100 */
+}
+
+body .text-gray-800 {
+  color: #2d3748; /* Dark text for gray-800 in light mode */
+}
+
+body .text-white {
+  color: white; /* White text (this should be used in dark mode to make text readable) */
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #2d3748; /* Dark background color */
+  color: white; /* Dark text color */
+}
+
+/* Dark mode specific styles */
+body.dark .bg-gray-800 {
+  background-color: #1a202c; /* Dark background for gray-800 */
+}
+
+body.dark .bg-gray-700 {
+  background-color: #2d3748; /* Darker gray background for sections */
+}
+
+body.dark .text-gray-800 {
+  color: #e2e8f0; /* Light gray text for dark mode */
+}
+
+body.dark .text-white {
+  color: white; /* White text in dark mode */
+}
+
+/* Transition for smooth theme change */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Flex container to center the content */
+body, .App {
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  min-height: 100vh; /* Make sure the content takes full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+/* For the main container holding content */
+.main-container {
+  width: 100%;
+  max-width: 1280px; /* Max width of the container */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* For responsive content */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+}
